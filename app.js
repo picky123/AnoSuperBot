@@ -111,12 +111,6 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '-help') {
-    msg.channel.send('``Ø Comenzi Ø`` , \n\ ***^ban - Banezi un membru \n\ ^kick - Dai afara un membru \n\ ^memes - Meme-urile botului \n\ ^serverinfo - Arata datele despre server \n\ ^avatar - Arata avatarul tau! \n\ ^invite - Invite-ul bot-ului \n\ ^servere - Serverele Speciale :heart:***');
-  }
-});
-
-client.on('message', msg => {
   if (msg.content === '-servers') {
     msg.channel.send(' ``Servere Speciale`` , \n\ **:one: Gaming - Romania :link: https://discord.gg/VksqgM9  \n\  :two: Warth Community :beginner: https://discord.gg/zu7ZxKG  \n\  :three: Atomic - Reactors :tada: https://discord.gg/KMXkjHG \n\ :tada: \n\ :four: Red-Army - https://discord.gg/zvhjnYh :tada:** ` Nu uita sa intrii aici! ` :beginner:');
   }
