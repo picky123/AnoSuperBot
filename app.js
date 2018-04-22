@@ -121,7 +121,7 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-if (message.content === '.help') {
+if (message.content === '-help') {
     var embed = new Discord.RichEmbed()
 //    .setTitle("") embed.setThumbnail(message.guild.iconURL)
        embed.addField('[♕] ``Default Commands ``[♕]', **'\n\ -ban - ban a member \n\ =========[♕]==========  \n\ -kick - kick a member \n\=========[♕]==========  \n[♕] -avatar - vezi avatarul tau. \n\ =========[♕]========== \n\ -meme - pozele bot-ului \n\ =========[♕]========== \n\ -serverinfo - info-ul despre server. \n\ =========[♕]========== \n\ -servers -serverele. \n\ =========[♕]==========**')
