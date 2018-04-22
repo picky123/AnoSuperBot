@@ -119,3 +119,9 @@ client.on('message', msg => {
 client.on('ready', () => {
   client.user.setGame('AnoBot (-help) ', 'https://www.twitch.tv/streamerhouse')
 })
+
+client.on('message', msg => {
+  if (msg.content === '-help') {
+    msg.channel.send(' `★ __Commands__ ★, \n\ ** -help - Commands Bot \n\ -ban - ban a member \n\ -kick - kick a member \n\ -memes - Memes \n\ -avatar - Show your avatar \n\ -invite - Invite the bot \n\ -servers - special server.**');
+  }
+});
