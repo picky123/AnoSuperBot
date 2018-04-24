@@ -71,12 +71,12 @@ if (message.content.toLowerCase().startsWith('>kick')) {
     let member = message.mentions.members.first();
     let reason = message.content.split(' ').slice(2).join(' ');
   if(!message.guild.member(message.author).hasPermission('KICK_MEMBERS')) return message.reply("**Scuze, dar nu ai acces la aceasta comanda.!**");
-  if(!member) return message.reply("**Mai ai ceva! Mentionul lui..**");
+  if(!member) return message.reply("**Ai uitat sa mentionezi cui vrei sa ii dai ``Kick`` :tada:**");
   if(!member.kickable)  return message.reply("**Aceasta persoana nu poate fi data afara de pe server!**");
   if(!reason) return message.reply("**Ai uitat sa pui motivul pentru care ii dai Kick lui " + member.tag + " !**");
   member.kick(reason)
   .catch(error => message.channel.send(`**Scuze ${message.author.tag} dar nu am putut sa dau Kick din cauza unei erori : ${error}**`));
-  message.channel.send(`**${member.user.tag}** a fost dat afara de **${message.author.tag}** Motivul: ${reason}`);
+  message.channel.send(`**${member.user.tag}** a primit ``Kick`` de catre **${message.author.tag}** Motivul: ${reason}`);
 }
 })
 
