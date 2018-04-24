@@ -2,19 +2,11 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const token = 'NDIwNjE3MDA1MDA4MTU4NzIw.DYBRoQ.PvaTdBre8WrDCVMyGGVWE00Rggs'
 
-client.on("ready", () => {
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-  client.user.setGame(`on ${client.guilds.size} servers` );
-});
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+};
 
 client.on("guildCreate", guild => {
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
-});
-
-client.on("guildDelete", guild => {
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
+      console.log(`${guild.name},  ${guild.memberCount} (de) persoane`);
 });
 
 client.on('message', msg => {
