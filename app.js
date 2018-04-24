@@ -2,11 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const token = 'NDIwNjE3MDA1MDA4MTU4NzIw.DYBRoQ.PvaTdBre8WrDCVMyGGVWE00Rggs'
 
-  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
-};
-
-client.on("guildCreate", guild => {
-      console.log(`${guild.name},  ${guild.memberCount} (de) persoane`);
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
