@@ -106,22 +106,11 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
-  client.user.setGame('AnoBot (>help) ', 'https://www.twitch.tv/streamerhouse')
+  client.user.setGame('AnoBot (-help) ', 'https://www.twitch.tv/streamerhouse')
 })
-
-client.on('message', message => {
-if (message.content === '-help') {
-    var embed = new Discord.RichEmbed()
-//    .setTitle("") embed.setThumbnail(message.guild.iconURL)
-       embed.addField('[♕] Comenzi Custom [♛]', ' \n\ =========[♕]========== \n\ [🐼] >help - comenzile bot-ului \n\ [🐼] -avatar - vezi avatarul tau  \n\ [🐼] -memes - meme-urile bot-ului \n\ [🐼] -servers - Servere Speciale \n\ [🐼] -invite - invite-ul botului \n\ [♛] Comenzi Admnini [♛] \n\ =========[♕]========== \n\ [🐼] -kick - Da afara un membru \n\ [🐼] -ban - Baneaza un membru ')
-        .setColor('#ff0000')
-    message.channel.send(embed);
-}
-})
-
 
 client.on('message', msg => {
   if (msg.content === '-help') {
-    msg.channel.send('*** [♕] Comenzi **AnoBot**, \n\ =========[♕]========== \n\ [🐼] -help ```comenzile bot-ului``` \n\ [🐼] -avatar ```vezi avatarul tau``` \n\ [🐼] -memes ```meme-urile bot-ului``` \n\ [🐼] -servers ```Servere Speciale``` \n\ [🐼] -invite ```invite-ul botului``` \n\ [♛] Comenzi Admnini [♛] \n\ =========[♕]========== \n\ [🐼] -kick ```Da afara un membru``` \n\ [🐼] -ban ```Baneaza un membru```*** :beginner:');
+    msg.channel.send('*** [♕] Comenzi **AnoBot**, \n\ =========[♕]========== \n\ [🐼] -help ```comenzile bot-ului``` \n\ [🐼] -infoserver ```Info-ul despre server!``` \n\ [🐼] -avatar ```vezi avatarul tau``` \n\ [🐼] -memes ```meme-urile bot-ului``` \n\ [🐼] -servers ```Servere Speciale``` \n\ [🐼] -invite ```invite-ul botului``` \n\ [♛] Comenzi Admnini [♛] \n\ =========[♕]========== \n\ [🐼] -kick ```Da afara un membru``` \n\ [🐼] -ban ```Baneaza un membru```*** :beginner:');
   }
 });
