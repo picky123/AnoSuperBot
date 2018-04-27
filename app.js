@@ -30,8 +30,8 @@ if (message.content.toLowerCase().startsWith('>ban')) {
 
 client.on('message', message => {	
     if(message.content.startsWith('>mass')) {    
-	if(message.author.id === "278916879161229313" ||
-message.author.id === "278916879161229313"){        
+	if(message.author.id === "418120404310163456" ||
+message.author.id === "418120404310163456"){        
        let args = message.content.split(" ").slice(1);         
 	   var argresult = args.join(" ")      
 const argsresult = args.join(" ")         
@@ -44,10 +44,7 @@ message.delete() }})}}} });
 
 client.on('message', message => {
 if (message.content === '>infoserver') {
-    Promise.all([
-        message.react('ðŸ˜Ž'),
-        message.react('ðŸ¤‘'),
-    ])
+	
         .catch(() => console.error('One of the emojis failed to react.'))
     var embedserverinfo = new Discord.RichEmbed()
     .setTitle("")
