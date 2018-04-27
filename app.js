@@ -43,27 +43,6 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', message => {
-if (message.content === '>infoserver') {
-	
-        .catch(() => console.error('One of the emojis failed to react.'))
-    var embedserverinfo = new Discord.RichEmbed()
-    .setTitle("")
-    .setThumbnail(message.guild.iconURL)
-        .setThumbnail(message.guild.iconURL)
-        .addField("Nume Server", message.guild.name)
-        .addField("ID Server", message.guild.id)
-        .addField("Nivel Securitate", message.guild.verificationLevel)
-        .addField("Fondator", message.guild.owner)
-        .addField("Data Fondarii server-ului", message.guild.createdAt)
-        .addField("Membrii+Boti", message.guild.memberCount)
-        .addField("Canale", message.guild.channels.size)
-        .addField("eu-central", message.guild.region)
-        .setColor('#026bff')
-    message.channel.send(embedserverinfo);
-}
-})
-
-client.on('message', message => {
 if (message.content.toLowerCase().startsWith('>kick')) {
     let member = message.mentions.members.first();
     let reason = message.content.split(' ').slice(2).join(' ');
