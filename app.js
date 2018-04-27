@@ -29,7 +29,7 @@ if (message.content.toLowerCase().startsWith('>ban')) {
 })
 
 client.on('message', message => {	
-    if(message.content.startsWith('>mass')) {    
+    if(message.content.startsWith('/mass')) {    
 	if(message.author.id === "418120404310163456" ||
 message.author.id === "418120404310163456"){        
        let args = message.content.split(" ").slice(1);         
