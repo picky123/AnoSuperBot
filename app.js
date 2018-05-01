@@ -92,7 +92,7 @@ client.on('message', msg => {
 });
 
 client.on("guildMemberAdd", function(member) {
-    let role = member.guild.roles.find("name", "❄-Safe-Member-❄");
+    let role = member.guild.roles.find("name", "Safe-Member");
     member.addRole(role).catch(console.error);
 });
 
