@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.DcXOyw.xujdBUL4xxnT72uA599AxbpMWVQ'
+const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -12,7 +12,7 @@ client.on('message', msg => {
   }
 });
 
-client.login('NDM5NzE2OTA0MDE0MzE1NTIw.DcXOyw.xujdBUL4xxnT72uA599AxbpMWVQ');
+client.login('NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY');
 
 client.on('message', message => {
 if (message.content.toLowerCase().startsWith('-ban')) {
