@@ -82,7 +82,7 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
-  client.user.setGame('Romania-Gaming #ROADTO1k https://discord.gg/VksqgM9', 'https://www.twitch.tv/streamerhouse')
+  client.user.setGame('Gaming-Romania #ROADTO1k https://discord.gg/VksqgM9', 'https://www.twitch.tv/streamerhouse')
 })
 
 client.on('message', msg => {
