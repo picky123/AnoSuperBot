@@ -95,3 +95,9 @@ client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Safe-Member");
     member.addRole(role).catch(console.error);
 });
+
+client.on("ready", async () => {
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("Gaming - Romania", {type: "WATCHING"});
+
+});
