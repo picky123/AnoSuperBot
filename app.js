@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY'
+const prefix = '-'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
