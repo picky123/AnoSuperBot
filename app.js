@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY'
-const prefix = '-'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -83,7 +82,7 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
-  client.user.setGame('AnoBot (-help) ', 'https://www.twitch.tv/streamerhouse')
+  client.user.setGame('Fortzaa :)', 'https://www.twitch.tv/streamerhouse')
 })
 
 client.on('message', msg => {
@@ -95,47 +94,4 @@ client.on('message', msg => {
 client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Safe-Member");
     member.addRole(role).catch(console.error);
-});
-
-client.on('message', message => { 
-
-    if (message.content.startsWith(PREFIX + 'Userinfo')) {
-
-        const UserInfo = new Discord.MessageEmbed()
-
-
-            .setAuthor(message.author.username, message.author.avatarURL()) 
-            .setTitle('UserInfo')
-            .setURL('www.google.com') 
-            .setColor('#ff0000M') 
-            .setImage(message.author.avatarURL()) 
-            .setThumbnail(message.author.avatarURL()) 
-
-
-            .addField('Avatar', message.author.avatar, true) 
-            .addField('AvatarURL', message.author.avatarURL({
-                format: 'png'
-            }), true)
-            .addField('AvatarURL', message.author.avatarURL({
-                size: '2048'
-            }), true)
-            .addField('Bot', message.author.bot, true) 
-            .addField('Created At', message.author.createdAt, false)
-            .addField('Discrim', message.author.discriminator, true) 
-            .addField('DMChannel', message.author.dmChannel)
-            .addField('ID', message.author.id) 
-            .addField('Last Message', message.author.lastMessage)
-            .addField('Last Message ID', message.author.lastMessageID) 
-            .addField('Presence', message.author.presence) 
-            .addField('Presence Status', message.author.presence.status) 
-            .addField('Presence Game', message.author.presence.activity.name) 
-            .addField('Tag', message.author.tag) 
-            .addField('Username', message.author.username)
-            .addField('Nick Name', message.guild.member(target).displayName) 
-
-            .setFooter('Requested By', message.author.tag) 
-            .setTimestamp() 
-
-        message.channel.send(UserInfo);
-    }
 });
