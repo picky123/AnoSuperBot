@@ -82,7 +82,7 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
-  client.user.setGame('Fortzaa :)', 'https://www.twitch.tv/streamerhouse')
+  client.user.setGame('Romania-Gaming #ROADTO1k https://discord.gg/VksqgM9', 'https://www.twitch.tv/streamerhouse')
 })
 
 client.on('message', msg => {
@@ -94,10 +94,4 @@ client.on('message', msg => {
 client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Safe-Member");
     member.addRole(role).catch(console.error);
-});
-
-client.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Gaming - Romania", {type: "WATCHING"});
-
 });
