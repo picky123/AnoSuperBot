@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY'
+const token = 'NDM5NzE2OTA0MDE0MzE1NTIw.Dc8irg.gATGnTTuU-KnnQbQmtqplp-0Zl0'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -12,7 +12,7 @@ client.on('message', msg => {
   }
 });
 
-client.login('NDM5NzE2OTA0MDE0MzE1NTIw.DctK3A.3UR3arCMfTOAXlkMKTQE1iNFoPY');
+client.login('NDM5NzE2OTA0MDE0MzE1NTIw.Dc8irg.gATGnTTuU-KnnQbQmtqplp-0Zl0');
 
 client.on('message', message => {
 if (message.content.toLowerCase().startsWith('-ban')) {
@@ -95,3 +95,11 @@ client.on("guildMemberAdd", function(member) {
     let role = member.guild.roles.find("name", "Safe-Member");
     member.addRole(role).catch(console.error);
 });
+
+client.on("guildCreate", async guild => {
+  const invite = await guild.channels.first().createInvite({
+    maxAge: 0
+  });
+  console.log(`Joined a new guild named: ${guild.name} with invite: https://discordapp.com/api/oauth2/authorize?client_id=439716904014315520&permissions=8&scope=bot`)
+});
+
