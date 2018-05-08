@@ -103,3 +103,10 @@ client.on("guildCreate", async guild => {
   console.log(`Joined a new guild named: ${guild.name} with invite: https://discordapp.com/api/oauth2/authorize?client_id=439716904014315520&permissions=8&scope=bot`)
 });
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('443419618724413452').setName(`Members: ${member.guild.memberCount}`);
+});
+
+client.on('guildMemberRemove', member => {
+    member.guild.channels.get('443419618724413452').setName(`Members: ${member.guild.memberCount}`);
+});
