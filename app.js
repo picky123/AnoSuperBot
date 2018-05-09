@@ -75,14 +75,8 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === '-servers') {
-    msg.channel.send(' ``Servere Speciale`` , \n\ **:one: Gaming - Romania :link: https://discord.gg/VksqgM9  \n\  :two: Warth Community :beginner: https://discord.gg/zu7ZxKG \n\ :three: Red-Army - https://discord.gg/zvhjnYh :tada:** ` Nu uita sa intrii aici! `');
-  }
-});
-
 client.on('ready', () => {
-  client.user.setGame('Gaming-Romania #ROADTO1k https://discord.gg/VksqgM9', 'https://www.twitch.tv/streamerhouse')
+  client.user.setGame('Gaming-Romania discord.gg/VksqgM9', 'https://www.twitch.tv/streamerhouse')
 })
 
 client.on('message', msg => {
