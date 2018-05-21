@@ -13,8 +13,7 @@ client.on('ready', () => {
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'ðŸŽ²-joined');
   if (!channel) return;
-  channel.send(`:hugging: *Bun venit pe serverul* ** = Blurple Community = **, ${member}!:
-`);
+  channel.send(`:hugging: *Bun venit pe serverul* ** = Blurple Community = **, ${member}!:`);
 });
 
 client.login('NDQ4MTYxMjEyOTkyMDYxNDQ1.DeSRHQ.Ep7ZoVOiQ2GFkKWM5cJ5SoQulik');
